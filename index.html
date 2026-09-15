@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhotoEditor</title>
+<link rel="stylesheet" href="css/style.css?v=1.1.0">
+</head>
+<body>
+<div id="app">
+  <div id="menubar"></div>
+  <div id="optionsbar"></div>
+  <div id="main">
+    <div id="toolbox"></div>
+    <div id="viewport">
+      <canvas id="view"></canvas>
+      <div id="welcome" hidden>
+        <div class="card">
+          <h1>PhotoEditor</h1>
+          <p>Put one photo on top of another, mask it, match the perspective, remove backgrounds, stitch panoramas. Your files never leave your computer.</p>
+          <div class="steps">
+            <div><b>1</b><span>Open the base photo</span></div>
+            <div><b>2</b><span>Place the second photo as a layer</span></div>
+            <div><b>3</b><span>Transform or fix perspective, then mask</span></div>
+          </div>
+          <div class="btns">
+            <button class="primary" onclick="PE.io.openFilePicker(true)">Open image…</button>
+            <button onclick="PE.ui.newDocDialog()">New document…</button>
+            <button onclick="PE.ui.guideDialog()">Quick guide</button>
+          </div>
+          <p class="small">…or drag &amp; drop image files here, or paste an image (Ctrl+V).</p>
+        </div>
+      </div>
+      <div id="dropzone" hidden>Drop to open / place as layer</div>
+    </div>
+    <div id="panels"></div>
+  </div>
+  <div id="statusbar"><span id="status-left"></span><span id="status-mid"></span><span id="status-right"></span></div>
+</div>
+<div id="dialog-host"></div>
+<div id="toasts"></div>
+<div id="busy" hidden><div class="spinner"></div><span id="busy-text"></span></div>
+<input type="file" id="file-input" multiple hidden>
+
+<script src="js/util.js?v=1.1.0"></script>
+<script src="js/history.js?v=1.1.0"></script>
+<script src="js/doc.js?v=1.1.0"></script>
+<script src="js/selection.js?v=1.1.0"></script>
+<script src="js/brush.js?v=1.1.0"></script>
+<script src="js/filters.js?v=1.1.0"></script>
+<script src="js/warp.js?v=1.1.0"></script>
+<script src="js/ai.js?v=1.1.0"></script>
+<script src="js/tools.js?v=1.1.0"></script>
+<script src="js/actions.js?v=1.1.0"></script>
+<script src="js/io.js?v=1.1.0"></script>
+<script src="js/stitch.js?v=1.1.0"></script>
+<script src="js/ui.js?v=1.1.0"></script>
+<script src="js/app.js?v=1.1.0"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+vendor/*
+!vendor/README.md
+.claude/
+*.log
+Thumbs.db
